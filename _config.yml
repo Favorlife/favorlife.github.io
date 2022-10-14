@@ -1,11 +1,9 @@
-title: Your awesome title
+title: WhiteCool's Blog
 author:
-  name: GitHub User
-  email: your-email@domain.com
+  name: Favor life
+  email: nian7bo16@outlook.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ 这里是WhiteCool的博文，期待你能在这里找到你想要的答案，如果部分博文上面内容有误，或侵犯您的权利，请联系nian7bo16@outlook.com，感谢您的友好交流，祝您生活愉快
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -16,8 +14,7 @@ minima:
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    github:  Favorlife
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
