@@ -21,13 +21,13 @@ Back in the late 1950's, a young [Frank Rosenblatt](https://en.wikipedia.org/wik
 
 In its essence, a perceptron is nothing more than a collection of values and rules for passing information through them, but in its simplicity lies its power.
 
-<center><img src='./assets/img/posts/20210125/Perceptron.png'></center>
+<center><img src='../assets/img/posts/20210125/Perceptron.png'></center>
 
 Imagine you have a 'neuron' and to 'activate' it, you pass through several input signals, each signal connects to the neuron through a synapse, once the signal is aggregated in the perceptron, it is then passed on to one or as many outputs as defined. A perceptron is but a neuron and its collection of synapses to get a signal into it and to modify a signal to pass on.
 
 In more mathematical terms, a perceptron is an array of values (let's call them weights), and the rules to apply such values to an input signal.
 
-For instance a perceptron could get 3 different inputs as in the image, lets pretend that the inputs it receives as signal are: $x_1 = 1, \; x_2 = 2\; and \; x_3 = 3$, if it's weights are $w_1 = 0.5,\; w_2 = 1\; and \; w_3 = -1$ respectively, then what the perceptron will do when the signal is received is to multiply each input value by its corresponding weight, then add them up.
+For instance a perceptron could get 3 different inputs as in the image, lets pretend that the inputs it receives as signal are: $x_1 = 1, \; x_2 = 2\; and \; x_3 = 3$, if it's weights are $w_1 = 0.5,\; w_2 = 1\; and \; w_3 = -1$ respectively, t·hen what the perceptron will do when the signal is received is to multiply each input value by its corresponding weight, then add them up.
 
 <p style="text-align:center">\(<br>
 \begin{align}
@@ -66,7 +66,7 @@ The neuron has 3 inputs and weights to calculate its output:
     input 1 is the X coordinate of the point,
     Input 2 is the y coordinate of the point,
     Input 3 is the bias and it is always 1
-
+    
     Input 3 or the bias is required for lines that do not cross the origin (0,0)
 
 The Perceptron starts with weights all set to zero and learns by using 1,000 random points per each iteration.
@@ -96,7 +96,7 @@ In this particular case, I coded the learning_rate to decrease with every iterat
 
 this is important to ensure that once the weights are nearing the optimal values the adjustment in each iteration is subsequently more subtle.
 
-<center><img src='./assets/img/posts/20210125/Learning_1000_points_per_iteration.jpg'></center>
+<center><img src='../assets/img/posts/20210125/Learning_1000_points_per_iteration.jpg'></center>
 
 In the end, the perceptron always converges into a solution and finds with great precision the line we are looking for.
 
