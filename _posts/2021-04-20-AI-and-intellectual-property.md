@@ -40,6 +40,6 @@ There are some countries, in particular the UK where some progress has been made
 
 <tweet>Perhaps a new model for remunerating creative work can be established, one that does not require commercial success to be necessary for artists to make a living.</tweet>
 
-![The next Rembrandt](./assets/img/posts/20210420/post8-rembrandt2.jpg)
+![The next Rembrandt](../assets/img/posts/20210420/post8-rembrandt2.jpg)
 <small>[The Next Rembrandt](https://www.jwt.com/en/work/thenextrembrandt) is a computer-generated 3-D–printed painting developed by a facial-recognition algorithm that scanned data from 346 known paintings by the Dutch painter in a process lasting 18 months. The portrait is based on 168,263 fragments from Rembrandt’s works.</small>
 

@@ -11,7 +11,7 @@ author: White Cool
 github: amaynez/TicTacToe/
 toc: yes # leave empty or erase for no TOC
 ---
-<center><img style="float: left;margin-right: 1em;" src='./assets/img/posts/20210318/Game_Screen.png' width="310" height="300"></center>
+<center><img style="float: left;margin-right: 1em;" src='../assets/img/posts/20210318/Game_Screen.png' width="310" height="300"></center>
 
 ## Background
 After many years of a corporate career (17) diverging from computer science, I have now decided to learn Machine Learning and in the process return to coding (something I have always loved!).
@@ -36,7 +36,7 @@ Now, for the fun part, training the network, I followed Deep Mind's own DQN reco
 
 ## Designing the neural network
 
-<center><img src='./assets/img/posts/20210318/Neural_Network_Topology.png' width="540"></center><br>
+<center><img src='../assets/img/posts/20210318/Neural_Network_Topology.png' width="540"></center><br>
 
 The Neural Network chosen takes 9 inputs (the current state of the game) and outputs 9 Q values for each of the 9 squares in the board of the game (possible actions). Obviously some squares are illegal moves, hence while training there was a negative reward given to illegal moves hoping that the model would learn not to play illegal moves in a given position.
 
@@ -231,7 +231,7 @@ The way I was training initially was:
 - Every move from either player generates a new training round, again with a random sample from the replay memory.
 - This continues until the number of games set up conclude.
 
-<center><img src='./assets/img/posts/20210318/ReplayMemoryBefore.png' width="540"></center>
+<center><img src='../assets/img/posts/20210318/ReplayMemoryBefore.png' width="540"></center>
 
 The first change was to train only after every game concludes with the same ammount of data (a batch). This was still not giving any good results.
 
@@ -239,13 +239,14 @@ The second change was more drastic, it introduced the concept of epochs for ever
 
 This meant that I was training now effectively 10 (or the number of epochs selected) times more per game, but in batches of the same size and randomly shuffling the experiences each epoch.
 
-<center><img src='./assets/img/posts/20210318/ReplayMemoryAfter.png' width="540"></center><br>
+<center><img src='../assets/img/posts/20210318/ReplayMemoryAfter.png' width="540"></center><br>
 
 After still playing around with some hyperparameters I managed to get similar performance as I got before, reaching 83.15% win rate vs. the random player, so I decided to keep training in rounds of 2,000 games each to evaluate performance. With almost every round I could see improvement:
 
-<center><img src='./assets/img/posts/20210318/Model7HyperParameters.png' width="540"><br>
-<img src='./assets/img/posts/20210318/Model7.png' width="480">
+<center><img src='../assets/img/posts/20210318/Model7HyperParameters.png' width="540"><br>
+<img src='../assets/img/posts/20210318/Model7.png' width="480">
 </center><br>
+
 
 As of today, my best result so far is 87.5%, I will leave it rest for a while and keep investigating to find a reason for not being able to reach at least 90%. I read about [self play](https://medium.com/applied-data-science/how-to-train-ai-agents-to-play-multiplayer-games-using-self-play-deep-reinforcement-learning-247d0b440717), and it looks like a viable option to test and a fun coding challenge. However, before embarking in yet another big change I want to ensure I have been thorough with the model and have tested every option correctly.
 
