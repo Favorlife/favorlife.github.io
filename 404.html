@@ -1,24 +1,21 @@
 ---
-layout: default
+layout: home-page
+permalink: /404.html
+title: Sorry 
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+{% include calculate_relative_base.html %}
+{% include escape-404.html %}
+<a href="{{ relativebase }}">
+    <picture>
+      <source srcset="{{ relativebase }}assets/img/404_small.jpg" media="(max-width: 768px)">
+      <source srcset="{{ relativebase }}assets/img/404.jpg">
+      <img src="{{ relativebase }}assets/img/404.jpg" alt="Page not found" class="pnf-image" style="width:100vw;max-width:unset;margin-left:calc((100% - 100vw)/2);margin-top:-16.5px;">
+    </picture>
+</a>
+{% include recent-post.html %}
+<form class="search-form inline">
+    <div id="search-container">
+        <input type="text" id="search-input" class="search" placeholder="Search">
+    </div>
+</form>
+<ul id="results-container" class="results-search"></ul>

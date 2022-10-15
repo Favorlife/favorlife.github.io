@@ -1,58 +1,81 @@
+# Site settings
 title: WhiteCool's Blog
-author:
-  name: Favor life
-  email: nian7bo16@outlook.com
-description: > # this means to ignore newlines until "show_excerpts:"
- 这里是WhiteCool的博文，期待你能在这里找到你想要的答案，如果部分博文上面内容有误，或侵犯您的权利，请联系nian7bo16@outlook.com，感谢您的友好交流，祝您生活愉快
+description: 这里是WhiteCool的博文，期待你能在这里找到你想要的答案，如果部分博文上面内容有误，或侵犯您的权利，请联系nian7bo16@outlook.com，感谢您的友好交流，祝您生活愉快 # this means to ignore newlines until "baseurl:"
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://favorlife.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+logo: "/assets/img/branding/alits.svg"
+logo-icon: "/assets/img/branding/alits-icon.svg"
+logo-icon-SEO: "/assets/img/branding/alits.png" # must be a non SVG file
 
-show_excerpts: false # set to true to show excerpts on the homepage
+# Night/Dark mode
+# Default mode is "auto", "auto" is for auto nightshift
+# (19:00 - 07:00), "manual" is for manual toggle, and
+# "on/off" is for default on/off.
+#
+# Whatever the user's choice is, it will supersede the
+# default setting of the site and be kept during the
+# visit (session). Only the dark mode setting is "manual",
+# it will be always kept on every visit (i.e. no matter
+# the browser is closed or not)
+night_mode: "auto"
 
-# Minima date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
-minima:
-  date_format: "%b %-d, %Y"
+logo-dark: "/assets/img/branding/alits-icon.svg"
+highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
 
-  # generate social links in footer
-  social_links:
-    github:  Favorlife
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
-    # google_scholar_id: qc6CJjYAAAAJ
+# Author settings
+author: Armando Maynez # add your name
+author-pic: Myself_Neon_grey.jpg
+about-author: Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
 
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+# Contact links
+email: nian7bo16@outlook.com # Add your Email address
+website: https://favorlife.github.io # Add your website
+github: favorlife # Add your Github handle
 
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
 
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+# Tracker
+analytics: G-R8SZS2YBZK
+fbadmin: ar.maybach
+
+# Paginate
+paginate: 6
+paginate_path: 'page:num'
+words_per_minute: 200
+
+# Comments
+comments: utteranc  #[disqus, utteranc]
+comments_opts:
+  comments_curtain: yes # leave empty to show the disqus embed directly
+  repo: # The GitHub repo URL.  https://utteranc.es/
+  issue_term: # The GitHub issue label
+  label: # The GitHub comments label
+  theme: # The GitHub comment's there. e.g. github-dark
+  # Disqus
+  discus_identifier: # Add your discus identifier
 
 # Build settings
-theme: minima
+markdown: kramdown
+mathjax: true
+highlighter: rouge
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+
+# Outputting
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+category_archive:
+  type: liquid
+  path: /categories/
+
+sass:
+  style: compressed
 
 plugins:
- - jekyll-feed
- - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock", "package-lock.json", "assets/css/sass/"]

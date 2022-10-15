@@ -1,38 +1,44 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+{% include calculate_relative_base.html %}
+{% capture post_url %}{{ relativebase }}{{ page.url }}{% endcapture %}
+{% assign post_url = post_url | replace: "//", "/" %}
+<section class="hidden">
+  <div class="post">
+      <a  class="post-list-title" href="{{ post_url }}">{{ page.title }}</a>
+      {% include post_meta.html type="post-card-meta" %}
+        <div class="post-excerpt">
+            {{ page.content | markdownify | strip_newlines | truncatewords: 100 }}<a class="read-more" href="{{ post_url }}"> read more</a>
+        </div>
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</section>
+<div class="flex-container transparent">
+  {% include header.html %}
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    {% include schema-meta.html %}
+    <div class="page-image">
+      <div class="cover-image" style="background: url('{{ relativebase }}assets/img/{{ page.img }}') center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">{{ page.title }}</h1>
+          {% include post_meta.html type="post-page-meta" %}
+        </div>
+        {% include sidebar.html context="post" class="side" id="sidebar" %}
+        {% if page.toc %}{% include sidebar-toc.html %}{% endif %}
+        {% include github-button.html %}
+        {{page.content | markdownify}}
+        {% include sidebar.html context="post" class="inline" id="post-end" %}
+        <div class="separator"></div>
+        {% include author-box.html %}
+        {% include recent-post.html %}
+        {% include newsletter.html %}
+        {% include comments.html %}
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  {% include search.html %}
+  {% include footer.html %}
+</div>
