@@ -458,12 +458,17 @@ blockquote {
     border-left: 10px solid var(--grey4);
     padding-left: 1em;
     margin-left: 2.5em;
-    font-style: italic;
     color: var(--accent-dark);
     background: var(--grey5);
     margin-right: 0;
     font-weight: 100;
 }
+
+blockquote p{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 pre {
   padding: 16px 32px;
   overflow-x: auto;
