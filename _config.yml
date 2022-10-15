@@ -23,9 +23,9 @@ logo-dark: "/assets/img/branding/alits.svg"
 highlight_theme: syntax-base16.monokai.dark # select a dark theme for the code highlighter if needed
 
 # Author settings
-author: Armando Maynez # add your name
-author-pic: Myself_Neon_grey.jpg
-about-author: Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.
+author: White Cool # add your name
+author-pic: author.jpg
+about-author: A college student just writes something casually when he is bored.
 
 # Contact links
 email: nian7bo16@outlook.com # Add your Email address
