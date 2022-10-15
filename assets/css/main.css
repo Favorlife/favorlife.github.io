@@ -463,14 +463,17 @@ pre {
   overflow-x: auto;
   font-family: monospace;
   font-size: 0.75rem;
+  background-color: #1b2426;
+  border-radius: 10px;
 }
 pre code {
   white-space: pre-wrap;
   display: block;
   color: #abb2bf;
-  background-color: #1b2426;
-  border-radius: 10px;
+
 }
+
+
 
 code {
   font-family: monospace;
@@ -1286,6 +1289,8 @@ path.fa-secondary {
     overflow: scroll;
     border-radius: 5px;
     overflow-x: hidden;
+    overflow-y: auto;
+    
   }
 }
 /* = = = = = = = = = = Tags = = = = = = = = = = */
