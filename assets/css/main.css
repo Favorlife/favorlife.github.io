@@ -146,6 +146,12 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
+.highlight{
+  background-color: #1b2426 !important;
+  border-radius: 10px !important;
+}
+
+
 code,
 kbd,
 samp {
@@ -477,6 +483,7 @@ pre code {
 
 code {
   font-family: monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: .875em;
   line-height: 1.2em;
   word-wrap: break-word;
@@ -1293,6 +1300,9 @@ path.fa-secondary {
     
   }
 }
+
+
+
 /* = = = = = = = = = = Tags = = = = = = = = = = */
 
 .center-tags .tag-cloud ul.tags {
