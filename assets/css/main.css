@@ -1284,6 +1284,8 @@ path.fa-secondary {
   .toc-content{
     max-height: calc(100vh - 7em);
     overflow: scroll;
+    border-radius: 5px;
+    overflow-x: hidden;
   }
 }
 /* = = = = = = = = = = Tags = = = = = = = = = = */
