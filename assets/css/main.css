@@ -481,16 +481,14 @@ pre code {
   white-space: pre-wrap;
   display: block;
   color: #abb2bf;
-
+  font-size: 14px;
+  line-height: 22px;
 }
 
 
 
 code {
-  font-family: monospace;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: .875em;
-  line-height: 1.2em;
+  font-family: Source Code Pro,DejaVu Sans Mono,Ubuntu Mono,Anonymous Pro,Droid Sans Mono,Menlo,Monaco,Consolas,Inconsolata,Courier,monospace,PingFang SC,Microsoft YaHei,sans-serif;
   word-wrap: break-word;
 }
 svg {
