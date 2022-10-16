@@ -8,7 +8,7 @@ description: Perceptron.
 img: posts/20210228/MLLibrary.jpg 
 tags: [machine learning, coding]
 author: White Cool
-github: favorlife/
+mathjax: yes
 ---
 
 # 感知机
